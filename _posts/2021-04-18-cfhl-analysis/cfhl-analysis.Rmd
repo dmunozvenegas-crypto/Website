@@ -2,9 +2,7 @@
 title: "CFHL-Analysis"
 description: |
   Exploratory Data Analysis on CFHL project.
-author:
-  - name: Demetrio Munoz
-    url: {}
+author: "Demetrio Munoz"
 date: 04-18-2021
 output:
   distill::distill_article:
