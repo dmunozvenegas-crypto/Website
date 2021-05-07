@@ -1,0 +1,53 @@
+[
+  {
+    "path": "posts/2021-05-01-tidytuesday/",
+    "title": "Tidytuesday-Videogames",
+    "description": "Tidytuesday videogames graph.",
+    "author": [
+      {
+        "name": "Demetrio Munoz",
+        "url": {}
+      }
+    ],
+    "date": "2021-05-01",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-05-01T20:23:37-07:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-04-18-cfhl-analysis/",
+    "title": "CFHL-Analysis",
+    "description": "Exploratory Data Analysis on CFHL project.",
+    "author": [
+      {
+        "name": "Demetrio Munoz",
+        "url": {}
+      }
+    ],
+    "date": "2021-04-18",
+    "categories": [],
+    "contents": "\r\nInstall pre-requiste packages\r\ninstall.packages(\"stats\")\r\ninstall.packages(\"dplyr\")\r\ninstall.packages(\"lattice\")\r\nLoad Required Libraries\r\n\r\n\r\n\r\nLoading data, loading data onto mydata object Note the Survery data needs to be imported into R-Studio\r\n\r\n\r\n\r\nIntroduction\r\nThe information I am going to do an EDA on comes from a project called CFHL, conducted by the CHC data analytic team from California state university Chico .In this EDA I will be working with the data set called survey_raw and I will be looking at the survey data responses from the participants who took the survey. The data within the survey is based on classes that were offered at different california state universities. The data within this data set has been gathered for about 1 or 2 years.\r\nData Summarization\r\nUnivariate Description:1st, I’m going to analyze the difference between class_standings who participated in the survey.\r\n\r\n\r\n     Freshman      Graduate        Junior Not a student        Senoir \r\n          138            26           133            20           139 \r\n     Sophmore \r\n           91 \r\n[1] \"factor\"\r\n\r\nBased on this data table the top three class standings that participated in this survey were Senoir at 139 participants, Freshman at 138, and Junior at 133 participants\r\nGraph displaying top 3 class standing participation\r\n\r\n\r\n\r\nThis bar graph Vizualizes what the data table showed about the top three mydata$classstanding participation participation .\r\n2nd,I’m going to analyze the number of participants in quant_classes\r\nThe second data set I am going to look into is about quant_classes. The quant_classes has 1-6 choices so the participant can pick if they participate in 1 quant classes- 6 quant classes.\r\n\r\n\r\n 1  2  3  4  5  6 \r\n45 12 85 31  9  6 \r\n\r\nThis table shows that 45 people attended at least one quant_class,took the survey. The quant_class that was taken the most was 3 quant_classes with a total of 85 people. The third most taken quant_classes was 4 with a total of 31 participants.\r\nThis is a side by side graph showing the relation between quant_classes,class standing.\r\nThis bar graph shows the distribution of quant classes, class standing is fill to shows the amount of the participants class standing. Based on this the graph one quant class had the most variety of class standing participants, contained the the most senior class standing participants.\r\n\r\n\r\n\r\nThese are the percent proportions generated for showing the relation between class_standing & quant_classes\r\n\r\n               \r\n                    1     2     3     4     5     6\r\n  Freshman      0.118 0.118 0.294 0.235 0.176 0.059\r\n  Graduate                                         \r\n  Junior        0.278 0.111 0.278 0.222 0.056 0.056\r\n  Not a student                                    \r\n  Senior        0.700 0.000 0.000 0.200 0.000 0.100\r\n  Sophomore     0.625 0.000 0.000 0.250 0.125 0.000\r\n\r\nThis data shows that Freshman, distrubtion through quant classes in percentages they have a lowest percentage in 6 quant classes, highest 1 quant class, juniors share this same reltionship with freshman. Senior distribution classes is its only 10 percent on 6 quant classws, highest on 1 quant classes, Sopmore only attended 1 quant class with a 62 percent, attended no 6 quant class. This illustrates that 1 quant class had the highest percent of class standing participants. This could be do to many different reasons.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-04-18-cfhl-analysis/cfhl-analysis_files/figure-html5/unnamed-chunk-4-1.png",
+    "last_modified": "2021-04-23T11:50:41-07:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-04-09-buildingdistill/",
+    "title": "Why I Built This Blog",
+    "description": "\"A Brief Overview Why I Built This Blog\"",
+    "author": [
+      {
+        "name": "Demetrio Munoz",
+        "url": {}
+      }
+    ],
+    "date": "2021-04-09",
+    "categories": [],
+    "contents": "\r\nI built this website to post information about me. I built this website because I wanted to create my first website with the package called distill, using the R studio, and R language. I decide to create this website as a blog because I want to be able to post about the projects I will be working on. The other reason why I created this website was to show that I start to learn and feel more confident in creating a website and making it unique.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-04-09-buildingdistill/supreme_transformers.jpg",
+    "last_modified": "2021-04-18T19:25:12-07:00",
+    "input_file": {}
+  }
+]

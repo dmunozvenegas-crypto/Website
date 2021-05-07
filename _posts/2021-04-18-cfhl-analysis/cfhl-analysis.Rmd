@@ -1,0 +1,129 @@
+---
+title: "CFHL-Analysis"
+description: |
+  Exploratory Data Analysis on CFHL project.
+author:
+  - name: Demetrio Munoz
+    url: {}
+date: 04-18-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Load required libraries 
+```{r, message=FALSE, warning=FALSE}
+library(stats)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+```
+
+# Loading data, loading data onto mydata object 
+```{r}
+load("clean_data.RData")
+mydata <-(survey_raw)
+```
+
+# Introduction
+ The data in this Exploratory Analysis comes from a project called CalFresh Healthy Living (CFHL), conducted by the Center for Healthy Communities (CHC) Research and Evaluation team at California State University Chico. Data collection from a self report survey started last summer and is ongoing. The data survey contains information two type of nutrition nutrition classes. One of the type of nutrition class was single session classes, the other type of nutrition class is series based classes. These two type of nutrition classes had different questions to collect different kind of information from the participants. For one time classes the questions asked about how confident the student is in their ability to recall the knowledge and skills that the student learned in the class. Classes mostly asked about the frequency with which the student are particular foods/did specific health behaviors. The series classes also, asked about certain questions to get feedback on the content of the class to test how much did the student learned in the series classes. The data that was collected pre and post series  classes only, will show is the course contributes to some changes in knowledge or health behavior. The other interesting data that was collected from both nutrition classes was demographics, food security,education, eating/nutrition knowledge and behaviors, food insecurity, and feedback on the class. 
+ This report examines the demographic of students, specifically their class standing, and the number of classes attended to see if there is a relationship between them.
+
+# Data Summarization 
+ First, I'm going examine the class standings who participated in the survey.
+ 
+```{r}
+mydata$classstanding <- factor(mydata$class_standing, labels = c("Freshman","Graduate","Junior","Not a student", "Senior","Sophomore"))
+mydata$classstanding_order <- factor(mydata$classstanding, levels = c("Freshman",  "Sophomore", "Junior", "Senior", "Graduate", "Not a student"))
+table(mydata$classstanding_order)
+```
+
+ Based on this data table the top three class standings that participated in this survey were Senoir at 139 participants, Freshman at 138, and Junior at 133 participants
+
+# Graph displaying top 3 class standing participation 
+```{r}
+vizc <- mydata %>% select(classstanding_order) %>%  na.omit() %>% ggplot(aes(x=classstanding_order, fill=classstanding_order)) +  geom_bar() + guides(fill=FALSE) + labs(title = "class standing & number of respondents ",
+       x = "Class Standing",
+       y = "number of respondents")
+vizc
+```
+
+ This bar graph displays the class standing of the students who participated in the survey. This graph illustrates that the top three class standing that took a part of this survey came from Freshman, Junior, Senior,the two lowest class standing that participated in this survey were Graduate, Not a Student.  
+
+# Second, I am going to explore how many classes in the series students attended. 
+ 
+ The second measure I am going to look into is about number of classes attended. The question has 1-6 choices so the participant can pick if they participate in 1 number of classes through 6 number of classes. 
+ 
+```{r}
+#create Vector containing number of classes
+mydata$quantclasses<-mydata$quant_classes
+# table shows 
+table(mydata$quantclasses)
+quantclassesmean <- mean(mydata$quantclasses, na.rm = TRUE)
+```
+
+ This table shows that that every number of classes had more than 6 participants. Minimum is 6 participants,the participants went to only 6 classes. The number of classes that was taken the most was number 3 with a total of 85 participants saying they went to only 3 classes. The third most taken number of classes was 1 number of classes with a total of 45 participants. The average number of classes taken was 2.8.
+
+# Histogram displays number of classes participants
+  The following histogram displays the number of participants in each number classes, from the graph it is visible that the number of classes that had the most participants was 3 number of classes. From the graph it is visible that every number of classes had at least 3 participants.
+  
+```{r}
+vizq <- ggplot(mydata,aes(quantclasses, fill = quantclasses)) +
+  geom_histogram(fill="red",alpha=0.7, col = "blue") +
+  labs(title = "number of class attended & respondents",
+       x = "number of classes attended",
+       y = "Number of respondents ")
+vizq
+
+```
+
+
+```{r}
+IQR(mydata$quantclasses, na.rm = TRUE)
+```
+
+# Table shows class standing and number of classes
+ The following table that compares class standing and number of classes. The table shows that graduates,and non-students had no data on the number of classes they took. 
+```{r}
+table(mydata$classstanding_order,mydata$quantclasses)
+```
+
+
+# Distribution of number of classes attended by class standing
+ The graph shows that their are less senior participants in number in classes, the data makes it visible that every number of classes had more than three participants from the different class standings.Sophomore had highest variability of the variable number of classes. Another insight that this graph show is the difference between freshman and senior participation. It is clear that the freshman class standing participated in all the different number of classes while senior had a gap at 2-3 number of classes. The freshman class standing overall had a greater participation compared to seniors.
+ 
+```{r}
+mydata_comparison<- mydata %>% 
+  select(classstanding_order, quantclasses) %>%  
+  na.omit() %>% 
+  ggplot(aes(x=classstanding_order,
+             y= quantclasses,
+             color= quantclasses)) + 
+  geom_jitter() + 
+  xlab("Students Class Standing") + 
+  ylab("number of classes") +
+  stat_summary(fun="mean", 
+               geom="point", 
+               size=3, 
+               pch=17,
+               color= "black", 
+               position=position_dodge(width=0.75)) +
+  geom_smooth(alpha = 10) + 
+  scale_colour_gradientn(colours = rainbow(4))
+mydata_comparison 
+
+```
+  
+ The average number of classes is shown below grouped by class standing. The table shows that freshman had the highest average in number of classes with 3.41, Juniors had a 2.8, sophomore had a 2.2, the lowest was seniors with a 2.1 participation average. 
+```{r}
+mydata %>% group_by(classstanding_order) %>% summarize(ave.classes = mean(quantclasses, na.rm=TRUE))
+```
+
+# Conclusion:
+  Based on the EDA I have conducted the one advice I have for the CHC is that may get rid of the option 
+  I have realized that one thing that CHC can do differently from the EDA information 
