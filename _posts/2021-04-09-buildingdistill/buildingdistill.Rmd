@@ -2,8 +2,7 @@
 title: "Why I Built This Blog"
 description: |
   "A Brief Overview Why I Built This Blog"
-author:
-  - name: Demetrio Munoz
+author: "Demetrio Munoz"
 date: 04-09-2021
 preview: supreme_transformers.jpg
 output:

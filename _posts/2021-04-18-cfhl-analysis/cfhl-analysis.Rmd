@@ -14,7 +14,6 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Load required libraries 
 ```{r, message=FALSE, warning=FALSE}
 library(stats)
 library(dplyr)
@@ -68,6 +67,7 @@ quantclassesmean <- mean(mydata$quantclasses, na.rm = TRUE)
  This table shows that that every number of classes had more than 6 participants. Minimum is 6 participants,the participants went to only 6 classes. The number of classes that was taken the most was number 3 with a total of 85 participants saying they went to only 3 classes. The third most taken number of classes was 1 number of classes with a total of 45 participants. The average number of classes taken was 2.8.
 
 # Histogram displays number of classes participants
+  
   The following histogram displays the number of participants in each number classes, from the graph it is visible that the number of classes that had the most participants was 3 number of classes. From the graph it is visible that every number of classes had at least 3 participants.
   
 ```{r}
@@ -87,6 +87,7 @@ IQR(mydata$quantclasses, na.rm = TRUE)
 
 # Table shows class standing and number of classes
  The following table that compares class standing and number of classes. The table shows that graduates,and non-students had no data on the number of classes they took. 
+ 
 ```{r}
 table(mydata$classstanding_order,mydata$quantclasses)
 ```
@@ -118,10 +119,10 @@ mydata_comparison
 ```
   
  The average number of classes is shown below grouped by class standing. The table shows that freshman had the highest average in number of classes with 3.41, Juniors had a 2.8, sophomore had a 2.2, the lowest was seniors with a 2.1 participation average. 
+ 
 ```{r}
 mydata %>% group_by(classstanding_order) %>% summarize(ave.classes = mean(quantclasses, na.rm=TRUE))
 ```
 
 # Conclusion:
-  Based on the EDA I have conducted the one advice I have for the CHC is that may get rid of the option 
-  I have realized that one thing that CHC can do differently from the EDA information 
+  Based on the EDA I have conducted the one advice I have for the CHC is that they can eliminate 6 number of classes because it has very low participation.

@@ -143,7 +143,7 @@ games %>%
   filter(date == max(date))%>%
   arrange((avg_peak_perc))
 # On this graph you can tell that world of warship stands out.
-games %>% 
+g <-games %>% 
   filter(avg >= 1000) %>%
   filter(date == "2021-01-01")%>%
   arrange((avg_peak_perc)) %>%
@@ -160,6 +160,153 @@ games %>%
   
 ```
 
+
+
+
+```{r}
+yr2012_jan <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-01-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Jan 2021",
+       y = "Ratio of Peak / Average")
+yr2012_feb <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-02-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Feb 2021",
+       y = "Ratio of Peak / Average")
+yr2012_mar <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-03-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in March 2021",
+       y = "Ratio of Peak / Average")
+yr2012_apr <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-04-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Apr 2021",
+       y = "Ratio of Peak / Average")
+
+
+yr2012_may <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-05-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in May 2021",
+       y = "Ratio of Peak / Average")
+
+
+yr2012_June <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-06-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Jun 2021",
+       y = "Ratio of Peak / Average")
+
+yr2012_Jul <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-07-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Jul 2021",
+       y = "Ratio of Peak / Average")
+
+yr2012_Aug <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-08-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Aug 2021",
+       y = "Ratio of Peak / Average")
+yr2012_Sep <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-09-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Sep 2021",
+       y = "Ratio of Peak / Average")
+
+yr2012_Oct <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-10-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Oct 2021",
+       y = "Ratio of Peak / Average")
+
+yr2012_Nov <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-11-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Nov 2021",
+       y = "Ratio of Peak / Average")
+
+yr2012_Dec <-games %>% 
+  filter(avg >= 1000) %>%
+  filter(date == "2012-12-01")%>%
+  arrange((avg_peak_perc)) %>%
+  ggplot(aes(avg, 1 / avg_peak_perc,label = gamename)) + 
+  geom_point() + 
+  geom_text(vjust = 1,hjust = 1,check_overlap = TRUE) +
+  scale_y_log10() + 
+  scale_x_log10(labels =comma) + 
+  labs(x= "Average number of players in Dec 2021",
+       y = "Ratio of Peak / Average")
+
+```
 
 spike on december 2019 
 the different spikes show when a new game came out and was poular.

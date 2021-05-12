@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-![](Demetrio.jpg){width=300}
+![](Demetrio.jpg){width=100}
 
 # About me: 
 
