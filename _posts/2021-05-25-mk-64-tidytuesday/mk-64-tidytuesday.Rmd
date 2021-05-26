@@ -1,0 +1,93 @@
+---
+title: "mk 64 tidytuesday"
+description: |
+  A short description of the post.
+author:
+  - name: Demetrio Munoz
+date: 05-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, include=FALSE}
+library(tidytuesdayR)
+library(tidyverse)
+library(lubridate)
+```
+# Mario Kart Data background 
+The data this week comes from Mario Kart World Records and contains world records for the classic (if you’re a 90’s kid) racing game on the Nintendo 64.
+
+This Video talks about the history of Mario Kart 64 World Records in greater detail. Despite it’s release back in 1996 (1997 in Europe and North America), it is still actiely played by many and new world records are achieved every month.
+
+The game consists of 16 individual tracks and world records can be achieved for the fastest single lap or the fastest completed race (three laps). Also, through the years, players discovered shortcuts in many of the tracks. Fortunately, shortcut and non-shortcut world records are listed separately.
+
+Furthermore, the Nintendo 64 was released for NTSC- and PAL-systems. On PAL-systems, the game runs a little slower. All times in this dataset are PAL-times, but they can be converted back to NTSC-times.
+
+# Import data
+```{r}
+
+tuesdata<-tt_load('2021-05-25')
+```
+# Loading the data onto objects
+```{r}
+records <- tuesdata$records
+drivers <- tuesdata$drivers
+
+```
+# Look at the data 
+```{r}
+str(records)
+```
+
+ Variables of interests for me are 'time' which is in seconds, and probably 'time' for the type of track and 'shortcut' because times will be different if the player used a shortcut. 
+# Question to explore: which track is the fastest
+start by looking at a distribution of record times.
+
+```{r}
+ggplot(records, aes(x =time)) + geom_bar() + labs(title = "Mario Kart 64 world record", x = "Time in seconds", y = "times the record time was achieved")
+
+```
+ The bar chart shows two different peaks this can be because single and three lap tracks. we can also tell that it peaks at 45s ish. This shows that certain tracks are played more than others
+
+```{r}
+table(records$track)
+```
+
+  16- not too many.. banshee boardwalk and bowser castle don't seem to be played much because they don't have a lot of entries in this data set. There could be many factors to why they are not played.
+
+```{r}
+ggplot(records, aes(x=time, fill = type)) + 
+  geom_histogram() + 
+  facet_wrap(~track)
+```
+ The track that had most variability on world record time was Rainbow rows it specifically had more variablity in 3 lap track. The tracks that has less world records was the Bowsers Castles, Banshee Boardwalk.
+
+```{r}
+which(records$time == min(records$time)) 
+```
+That was a base R solution. Here is a 'tidyverse' solution
+
+```{r}
+records %>%
+  arrange(time) %>%
+  slice(1)
+```
+
+  The fastest time was on wario stadium using shortcut side tangent - what is the time distribution seperated by shortcut
+  
+```{r}
+ggplot(records, aes(y = time, x = shortcut, fill  = shortcut)) + geom_boxplot() + facet_wrap(~track)
+```
+
+```{r}
+ggplot(records, aes(x = time, color = shortcut)) + geom_density() + 
+  facet_wrap(~track, scales = "free")
+
+```
