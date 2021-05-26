@@ -4,7 +4,6 @@ description: |
   Tidytuesday videogame graph.
 author:
   - name: Demetrio Munoz 
-    url: {}
 date: 05-01-2021
 output:
   distill::distill_article:
@@ -16,18 +15,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Load data & assign object to data
-```{r}
-
-games <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv')
-```
-
-
-```
-install.packages(tidytuesday)
-install.packages(tidyverse)
-```
-# Load packages 
+# Libraries that will be used for this data Analysis 
 ```{r}
 library(tidytuesdayR)
 library(tidyverse)
@@ -36,13 +24,15 @@ library(lubridate)
 library(plotly)
 theme_set(theme_light())
 ```
-
+# Import data
 # Load Data
 ```{r}
 tt<- tt_load("2021-03-16")
 
 ```
+ 
  1 because every first of the month
+
 ```{r}
 tibble(date = seq(as.Date("2020-01-01"),as.Date("2020-12-31"),1)) %>% 
   mutate(month_number = month(date))
