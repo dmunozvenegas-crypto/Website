@@ -13,11 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-![](Demetrio.jpg){width=100}
+![](Demetrio.jpg){width=25}
 
 # About me: 
 
-I love eating orange chicken and Sushi. I love cooking because my major had lots of labs which were about cooking. I enjoy going hiking, backpacking, camping. I like weightlifting on my free time.I am a very outgoing individual and I like challenging my self to learn new things in life. I love my current hobby at the moment which is R language it is very useful in real life because you can create artificial computer and look into data from different angles which makes it challenging and interesting.
+I love eating orange chicken and Sushi. I love cooking because my major had lots of labs which were about cooking. I enjoy going hiking, backpacking, camping. I like weightlifting on my free time.I am a very outgoing individual and I like challenging my self to learn new things in life. I love my current hobby at the moment which is R Studio it is very useful in real life because you can work large amount of data and create a data analysis to find something interesting about the data. You can create websites with R studio. This actually website was made with R and with the help of the packaged called Distill which allows you to create a website without a lot of web development skills, it is easy to learn. The other code language that I am learning to is python because just like R can do a whole lot. 
 
 # Education: 
 
@@ -25,6 +25,8 @@ My major is Nutrition Food Science with an emphasize in Management. I am current
 
 # Internship: 
 
-CHC Data Science Team, gave me the opportunity to be able to work with the Data they collected from the Project called CFHL (Cal-Fresh Healthy Living). This project collected data on classes that were given at different California University campuses 
+CHC Data Science Team, gave me the opportunity to be able to work with the Data they collected from the Project called CFHL (Cal-Fresh Healthy Living). This project collected data on classes that were given at different California University campuses. 
+
+
 
 
