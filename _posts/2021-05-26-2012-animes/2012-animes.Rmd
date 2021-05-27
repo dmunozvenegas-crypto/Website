@@ -1,10 +1,9 @@
 ---
 title: "2012 animes"
 description: |
-  A short description of the post.
+  The following blog will be about the top anime of 2012.
 author:
   - name: Demetrio Munoz
-    url: {}
 date: 05-26-2021
 output:
   distill::distill_article:
@@ -16,8 +15,58 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# The following list of anime are coe from 2012 series some of the anime that will be mentioned are on going. 
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+#the following data will be created for the top anime for 2012
+#created the objected called anime name.
+animename<- c("JoJo's Bizzare Adventure","Sword are","Kurokos's Basketball", "Psycho-Pass",
+              "Another",
+              "Magi: The labyrinth of Magic",
+              "Kamishama hajimemashita",
+              "K", "Nisemonogatari",
+              "Joshiraku",
+              "Star Blazers 2199",
+              "Girl und Panzer",
+              "Nyaruko: Crawling with Love",
+              "Medaka Box","Zetman",
+              "Uchû kyôdai",
+              "Aquarion EVOL",
+              "Bodacious Space Pirates ",
+              "Terumae romae",
+              "Wooser no Sono Higurashi")
+```
+
+```{r}
+# The following code line will be created to store the data for ranking from 1-20
+ranking<- c(1:20)
+anime.list <- list(anime =animename,place = ranking)
+```
 
 
