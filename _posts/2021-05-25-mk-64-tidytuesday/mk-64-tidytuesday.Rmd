@@ -49,7 +49,7 @@ str(records)
 
  Variables of interests for me are 'time' which is in seconds, and probably 'time' for the type of track and 'shortcut' because times will be different if the player used a shortcut. 
 # Question to explore: which track is the fastest
-start by looking at a distribution of record times.
+  start by looking at a distribution of record times.
 
 ```{r}
 ggplot(records, aes(x =time)) + geom_bar() + labs(title = "Mario Kart 64 world record", x = "Time in seconds", y = "times the record time was achieved")
@@ -73,20 +73,23 @@ ggplot(records, aes(x=time, fill = type)) +
 ```{r}
 which(records$time == min(records$time)) 
 ```
-That was a base R solution. Here is a 'tidyverse' solution
 
+  The fastest time was on wario stadium using shortcut side tangent - what is the time distribution seperated by shortcut
+  
 ```{r}
 records %>%
   arrange(time) %>%
   slice(1)
 ```
 
-  The fastest time was on wario stadium using shortcut side tangent - what is the time distribution seperated by shortcut
+   The following box plot shows every single track, if shortcuts were used or not, and it includes the time the track was done. The following tracks did not use shortcuts Banshee Boardwalk, Bowser's Castle, Koopa Troopa Beach, Moo Moo Farm. The other intersting thing about these tracks is that their time stayed within 100 seconds. 
   
 ```{r}
 ggplot(records, aes(y = time, x = shortcut, fill  = shortcut)) + geom_boxplot() + facet_wrap(~track)
 ```
-
+ 
+  The interest graph that stands out is the Wario Stadium because of its high peak when using shortcut. Even when a shortcut was used for the track Wario Stadium the time for completion was still relativily high in the beginning. 
+  
 ```{r}
 ggplot(records, aes(x = time, color = shortcut)) + geom_density() + 
   facet_wrap(~track, scales = "free")

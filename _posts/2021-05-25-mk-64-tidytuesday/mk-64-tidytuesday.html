@@ -110,12 +110,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","draft","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["mk 64 tidytuesday"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Demetrio Munoz"]}]}]},{"type":"character","attributes":{},"value":["05-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","draft","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["mk 64 tidytuesday"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Demetrio Munoz"]}]}]},{"type":"character","attributes":{},"value":["05-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["mk-64-tidytuesday_files/anchor-4.2.2/anchor.min.js","mk-64-tidytuesday_files/bowser-1.9.3/bowser.min.js","mk-64-tidytuesday_files/distill-2.2.21/template.v2.js","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-10-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-11-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-5-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-7-1.png","mk-64-tidytuesday_files/header-attrs-2.7/header-attrs.js","mk-64-tidytuesday_files/jquery-1.11.3/jquery.min.js","mk-64-tidytuesday_files/popper-2.6.0/popper.min.js","mk-64-tidytuesday_files/tippy-6.2.7/tippy-bundle.umd.min.js","mk-64-tidytuesday_files/tippy-6.2.7/tippy-light-border.css","mk-64-tidytuesday_files/tippy-6.2.7/tippy.css","mk-64-tidytuesday_files/tippy-6.2.7/tippy.umd.min.js","mk-64-tidytuesday_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["mk-64-tidytuesday_files/anchor-4.2.2/anchor.min.js","mk-64-tidytuesday_files/bowser-1.9.3/bowser.min.js","mk-64-tidytuesday_files/distill-2.2.21/template.v2.js","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-10-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-11-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-5-1.png","mk-64-tidytuesday_files/figure-html5/unnamed-chunk-7-1.png","mk-64-tidytuesday_files/header-attrs-2.7/header-attrs.js","mk-64-tidytuesday_files/header-attrs-2.8/header-attrs.js","mk-64-tidytuesday_files/jquery-1.11.3/jquery.min.js","mk-64-tidytuesday_files/popper-2.6.0/popper.min.js","mk-64-tidytuesday_files/tippy-6.2.7/tippy-bundle.umd.min.js","mk-64-tidytuesday_files/tippy-6.2.7/tippy-light-border.css","mk-64-tidytuesday_files/tippy-6.2.7/tippy.css","mk-64-tidytuesday_files/tippy-6.2.7/tippy.umd.min.js","mk-64-tidytuesday_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1545,7 +1545,7 @@ D.K.&#39;s Jungle Parkway       Frappe Snowland       Kalimari Desert
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>[1] 1306</code></pre>
 </div>
-<p>That was a base R solution. Here is a ‘tidyverse’ solution</p>
+<p>The fastest time was on wario stadium using shortcut side tangent - what is the time distribution seperated by shortcut</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code># A tibble: 1 x 9
   track    type   shortcut player system_played date       time_period
@@ -1553,10 +1553,11 @@ D.K.&#39;s Jungle Parkway       Frappe Snowland       Kalimari Desert
 1 Wario S~ Three~ Yes      VAJ    NTSC          2020-07-30 14.59S     
 # ... with 2 more variables: time &lt;dbl&gt;, record_duration &lt;dbl&gt;</code></pre>
 </div>
-<p>The fastest time was on wario stadium using shortcut side tangent - what is the time distribution seperated by shortcut</p>
+<p>The following box plot shows every single track, if shortcuts were used or not, and it includes the time the track was done. The following tracks did not use shortcuts Banshee Boardwalk, Bowser’s Castle, Koopa Troopa Beach, Moo Moo Farm. The other intersting thing about these tracks is that their time stayed within 100 seconds.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="mk-64-tidytuesday_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
+<p>The interest graph that stands out is the Wario Stadium because of its high peak when using shortcut. Even when a shortcut was used for the track Wario Stadium the time for completion was still relativily high in the beginning.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="mk-64-tidytuesday_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
 </div>
