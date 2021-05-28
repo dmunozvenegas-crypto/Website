@@ -16,13 +16,14 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Are you anime fan lover and do not know what to watch?
+# Are you anime lover and do not know what to watch?
     
     Top 20 anime for 2012 overview
     
     
-  The following list of anime are fom 2012 created by IMDb tv. The list is based on the most popular anime of 2012, the genres on this list are very broad. The following genres on these anime
- The following list of top anime comes from 2012 collection of most popular anime based on the information from IMDb. The anime genres that are in this following list is very versitile because it has sport anime, action anime, romance anime, etc.. I will include short overview of the anime to try to win you over to give one of these anime a try. 
+  The following list of anime are from 2012 collection created by IMDb tv. The list is based on the most popular anime of 2012, the genres on this list are very broad. The anime that came number one in this anime list on 2012 based on popularity is JoJo's Bizzare Adventure its genre is action, and adventure. JoJo Bizzare is for those anime lovers who love a good fight scene with a very interesting story line. The anime that came in second was Sword Art Online, the genre of this anime is action and adventure. This anime is for those anime lovers like anime that are based on virtual reality. The anime that came in 3rd place was Kuroko's Basketball and the genre of this anime is for basketball lovers. The anime coming in at fourth place is Psycho Pass and this anime is for those anime lovers who love a good action, crime anime. The fifth anime of this list is the anime called Another and this anime is recommended for those anime lovers who love Horror anime genre. I will only mention the top 5 anime for 2012 the rest of the you can explore for yourself but they are high reccommended to watch. 
+  
+  The list was not created by me I got list from IMDb Website for the most popular anime of 2012. I hope this anime list can help anyone looking for anime recommendations. Head over to favorite website and start binging on one of these animes now.
 
 ![](JoJo.jpg){width=50}
 
@@ -129,6 +130,9 @@ Despite its weaknesses, SAO’s breathtaking scenery and fluid animation cannot 
 ![](Star Blazers 2199.jpg){width=50}
 
 # 11.Star Blazers 2199
+
+    Genre: Animation, Action, Adventure
+
   The year is 2199. The human race has been crushed in their war with the Gamilos, driven into underground cities by the invader's assault. Scientists estimate they have only a year left. The young officers Susumu Kodai and Daisuke Shima receive a mysterious capsule from a ship that made an emergency landing on Mars and return with it to Earth. It contains humanity's last hope: the planet Iscandar on the other side of the Magellan Galaxy has the technology to defeat the Gamilos and restore the planet. The space battleship Yamato is entrusted with this task, but they have only one year before humanity ends.
   
   Source: CrunchyRoll
@@ -136,6 +140,9 @@ Despite its weaknesses, SAO’s breathtaking scenery and fluid animation cannot 
 ![](Girl und Panzer.jpg){width=50}
 
 # 12.Girl und Panzer
+
+    Genre: Animation, Action, Comedy
+
   Forget track and field! At Oorai Girls Academy, they practice Shensha-do, the art of tank combat! But Miho transfers there believing it to be the one school where Shensa-do isn't offered. She's in for a rude awakening, however, when the student council president demands her participation in the sport. Together with four friends, she learns to face her fears, find herself, and have a whole lot of fun along the way. Get ready for tank fighting mayhem in Girls Und Panzer!
   
   Source: AnimePlanet
@@ -143,6 +150,9 @@ Despite its weaknesses, SAO’s breathtaking scenery and fluid animation cannot 
 ![](Crawling with Love.jpg){width=50}
 
 # 13.Nyaruko: Crawling with Love
+
+    Genre: Animation, Action, Comedy
+
   She is the malign deity "Crawling Chaos" Nyarlathotep, or Nyarko for short.
 Together with "Living Flame" Cthuga, or Kuko, and "The Unspeakable One" Hastur, or Hasuta, they bring you an abysmally terrifying Love(craft) comedy!
 
@@ -156,6 +166,9 @@ Will Mahiro be able to live in peace?
 ![](Medaka Box.jpg){width=50}
 
 # 14.Medaka Box
+
+    Genre: Animation, Action, Comedy
+
   The gorgeous, peerless student council president, Medaka Kurokami, solves everyone's problems! Medaka Kurokami, who has just become Sandbox Academy's 98th student council president, sets up a suggestion box as promised in her election campaign. "Your dreams belong to you. Go after them and make them come true yourself. Your worries, however, belong to me. Send them all my way!!" As Medaka solves her fellow students' problems along with her friend since childhood, Zenkichi Hitoyoshi, her suggestion box, nicknamed the Medaka Box, earns great popularity among the students.
   
   Source: IMDb
@@ -163,6 +176,9 @@ Will Mahiro be able to live in peace?
 ![](Zetman.jpg){width=50}
 
 # 15.Zetman
+
+    Genre: Animation, Action, Sci-Fi
+
   Jin is an energetic young boy living in a shanty town and making ends meet by performing good deeds for money. However, when his mentor dies during a fight with a strange monster he finally learns the meaning of death. Having been taken in by a stripper named Akemi whom he once saved, Jin begins to live a quiet and normal life - though in reality he is anything but ordinary. With superhuman abilities and a group of mysterious men searching for him under the name of Zet, over the years Jin finds himself drawn into a world of creatures with dangerous powers called "Players". But what is Jin really, and with his vicious methods of defeating these threats, is he really a hero for justice or simply another dangerous monster?
   
   Source: Forevergeek
@@ -170,6 +186,9 @@ Will Mahiro be able to live in peace?
 ![](Uchû kyôdai.jpg){width=50}
 
 # 16.Uchû kyôdai
+
+    Genre: Animation, Comedy
+
   One evening two brothers see what appears to be a UFO in the sky. Whether or not that was the case becomes irrelevant, but it does spark an interest in space and the two brothers make a promise to go to space one day. Now, many years later, the younger brother Hibito is about to realize his dream, while the older brother Mutta just got fired from his job. After an aimless period in his life, his family helps re-ignite his fire and he becomes an applicant to the Japanese space agency in the hopes of making it up there some day.
   
   Source: Forevergeek
@@ -177,6 +196,9 @@ Will Mahiro be able to live in peace?
 ![](Aquarion EVOL.jpg){width=50}
 
 # 17.Aquarion EVOL
+
+    Genre: Animation, Action, Romance
+
   Aquarion Evol (アクエリオンEVOL Akuerion Evoru) is the sequel to the 2005 anime series Genesis of Aquarion. It was originally announced on February 25, 2011, by the production staff. It premiered on TV Tokyo on January 8, 2012, as an hour-long special that combined the first two episodes in a single broadcast.
   
   Source: Animeplanet
@@ -184,6 +206,9 @@ Will Mahiro be able to live in peace?
 ![](Bodacious Space Pirates.jpg){width=50}
 
 # 18.Bodacious Space Pirates
+
+    Genre: Animation, Action, Romance
+
   Marika is living the normal life of an average girl in space: attending her school's yacht club, keeping up with the latest trends, and working part time. One day can change a lot, however. Not only was her late father a notorious space pirate, he was also the Captain of the equally notorious Benten Maru! What's worse, she's just inherited his position and the pirate's life that comes with it.
   
   Source: CrunchyRoll
@@ -191,6 +216,9 @@ Will Mahiro be able to live in peace?
 ![](Terumae Romae.jpg){width=50}
 
 # 19.Terumae Romae
+
+    Genre: Animation
+
   Lucius, a Roman architect, is transported through time to modern-day Japan, where he learns about Japanese bathhouses and uses this to his gain back home.
   
   Source: IMDb
@@ -198,6 +226,9 @@ Will Mahiro be able to live in peace?
 ![](Wooser no Sono Higurashi.jpg){width=50}
 
 # 20.Wooser no Sono Higurashi
+
+    Genre: Animation
+
   Wooser is an adorable creature with a not-so-adorable fetish for panties and school girls. Alongside the lovely ladies Miho, Ren and Rin, Wooser always manages to have a fun time, whether the gang has a DJ dance party, forms sculptures out of clay or even volunteers at the zoo.
   
   Source: IMDb
