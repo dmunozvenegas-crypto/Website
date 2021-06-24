@@ -1,0 +1,100 @@
+---
+title: "Data on Covid 19"
+description: |
+  A short description of the post.
+author:
+  - name: Demetrio Munoz
+date: 06-03-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+# libraries
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Importing data 
+```{r}
+file<- "owid-covid-data.csv"
+data<- read.csv(file)
+```
+
+# Introduction 
+  The following data comes from a repository from the github Our world in data. The data has been collected since January 2020 and is on going. The data sets contains all the information for Covid-19. From the author Our World In Data "Our complete Covid-19 data set is a collection of the COVID-19 data maintained by Our World in Data. It is updated daily and includes data on confirmed cases, deaths, hospitalizations, testing, and vaccinations as well as other variables of potential interest." I will be doing an analysis on the data to find if their is any relationship within the data. I will be answering some easy questions along the way. 
+  
+# Exploration of Populations:
+  The first thing I will be looking at from the covid-19 data set will be population. My first observation gives me information of the total population of 2020-2021. The data includes a population of only 809 residents. The max population of the covid-19 dataset is 7,794,798,729. The mean of the population is 126,013,661. The IQR of the populations is 32588139.
+```{r}
+pop <- data %>%
+  select(population) %>%
+  na.omit(population)
+summary(pop)
+IQR(unlist(pop))
+
+```
+
+# Histogram of Populations
+  The following histogram of populations shows the distribution of the populations in intervals. The most frequent population is within the 16 interval, the coefficients the histogram is 0.005044, 0.001727. 
+  
+```{r}
+df<- lapply(pop,as.numeric)
+hist(log(unlist(df)), col="red", main = "Histogram of Populations",freq=FALSE, xlab = "Height of bin") 
+grid(nx = NA, ny = NULL, lty = 2, col = "blue", lwd = 1)
+hist(data$population, prob = TRUE, add = TRUE, col = "blue")
+class(df)
+class(pop)
+```
+
+# Density line for populations 
+  The following line of density shows the peak of the populations, it shows that it is not normally distributed. It is skewed to the right meaning that the world populations are usually large.
+
+```{r}
+popden<- density(log(unlist(df)))
+plot(popden, main = "Population density line")
+```
+
+# Density Curve
+  The following histogram is on population with its line density. We can see the constant is population is 92490, it falls with the interval that contains the peak. 
+  
+```{r}
+hist(log(unlist(df)),col = "green", freq = FALSE, main = "Density curve", xlab = "Height of Bin")
+grid(nx = NA, ny = NULL, lty = 2, col = "blue", lwd = 1)
+lines(density(log(unlist(df))), lwd = 2, col = 'red')
+
+```
+
+# Geographical location:
+ I want to know how many continents are there, is there missing continents? Is there anything that stands out from this data set. The number of continents is 7, there is no missing continent. The table shows that three continents have large numbers this could be a for a lot of reasons. one reason it can be because of the population or there could be another reason ill be looking more into this. This could mean that maybe some of these continents did not get heavily impacted by Covid-19. Something else that is interesting about the continents is that Antarctica had the lowest number 3620, the highest was Australia with 25035. The other interesting insight that the table shows is that Africa, Europe had almost the same number but Europe came ahead with 23043, Africa had 23022. This is interesting because the continent that lies in the middle of them had a number of only 4570. 
+ 
+```{r}
+# The first thing that I will do is create a factor so then I could create a bar plot
+conf <- factor(data$continent, labels = c("Australia","Africa","Asia","Europe", "North America","Oceania","South America"))
+table(conf)
+Table_1 <- data %>% select(continent) %>% table()
+Table_1
+```
+# Bar graph 
+  The following bar graph shows the geographical location distribution for the 7 continents that data was include on the Covid-19. We can see that the Oceania, Australian continents had the smallest range of geographical participation.The data shows that Africa had the highest range. the other two that follow are the Asian and European continent.
+  
+```{r}
+vizc <- data %>% select(continent) %>% ggplot(aes(x=conf,fill=conf)) +  geom_bar()  + labs(title = "Geographical location ",
+       x = "Continent",
+       y = "Range")
+vizc
+```
+
+ Is there any missing data or missing continents?
+ 
+```{r}
+data %>% 
+  select(conf,pop) %>% 
+  group_by()
+```
