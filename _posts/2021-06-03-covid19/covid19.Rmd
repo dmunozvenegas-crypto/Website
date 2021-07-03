@@ -107,6 +107,10 @@ femsmokingpop<- data %>%
 femsmokingpop
 summary(femsmokingpop)
 ```
+  The following code will be for scatterplot 
+```{r}
+ggplot(femsmokingpop, aes(x=female_smokers, y=population,na.omit())) + geom_point() + geom_smooth(method ="lm")
+```
 
 # Female Smokers information
 ```{r}
