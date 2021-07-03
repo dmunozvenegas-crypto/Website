@@ -109,7 +109,14 @@ summary(femsmokingpop)
 ```
   The following code will be for scatterplot 
 ```{r}
-ggplot(femsmokingpop, aes(x=female_smokers, y=population,na.omit())) + geom_point() + geom_smooth(method ="lm")
+(g<- ggplot(femsmokingpop, aes(x=female_smokers, y=population,na.omit())) + geom_point() + geom_smooth(method ="lm"))
+g + coord_cartesian(xlim=c(0,.1), ylim=c(0, 100000))
+
+ggplot(femsmokingpop, aes(x=female_smokers,y=population,na.omit())) + 
+  geom_point(col="steelblue", size=3) + geom_smooth(method="lm",color="firebrick") + 
+  coord_cartesian(xlim=c(0,15
+                         ), ylim=c(0, 1000000000)) + labs(title="female smoker Population", subtitle="From Covid 19 dataset", y="Population", x="female smokers", caption="Covid 19 female smoker population")
+
 ```
 
 # Female Smokers information
