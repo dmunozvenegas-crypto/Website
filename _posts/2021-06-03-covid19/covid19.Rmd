@@ -1,10 +1,11 @@
 ---
 title: "Data on Covid 19"
 description: |
-  A short description of the post.
+  This will be a on going blog about Covid 19 
 author:
   - name: Demetrio Munoz
 date: 06-03-2021
+preview: covid19.jpg
 output:
   distill::distill_article:
     self_contained: false
@@ -32,6 +33,7 @@ data<- read.csv(file)
   
 # Exploration of Populations:
   The first thing I will be looking at from the covid-19 data set will be population. My first observation gives me information of the total population of 2020-2021. The data includes a population of only 809 residents. The max population of the covid-19 dataset is 7,794,798,729. The mean of the population is 126,013,661. The IQR of the populations is 32588139.
+  
 ```{r}
 pop <- data %>%
   select(population) %>%
@@ -91,8 +93,26 @@ vizc
 
  All of the seven continents are included.
  
- # The following question I will look into is the distribution that is female and smokes cigarettes or tabbaco. I will be using total population.
+# Female smokers population & other information
+  The following question I will look into is the distribution of female and smokers population by creating a table.
+  
+# Female smoker population percent 
+  The following table shows that females 
+  
 ```{r}
-femsmokingpopulation <- data %>% select(female_smokers:population) %>% na.omit %>% tbl_df()
+femsmokingpop<- data %>% 
+  select(female_smokers,population) %>% 
+  na.omit() %>%
+  tbl_df()
+femsmokingpop
+summary(femsmokingpop)
+```
+
+# Female Smokers information
+```{r}
+femsmokingpopulation <- data %>%        select(female_smokers:population) %>% 
+  na.omit %>% 
+  tbl_df()
 femsmokingpopulation
+summary(femsmokingpopulation)
 ```
