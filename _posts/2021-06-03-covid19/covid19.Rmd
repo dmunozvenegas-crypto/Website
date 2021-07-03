@@ -49,8 +49,6 @@ df<- lapply(pop,as.numeric)
 hist(log(unlist(df)), col="red", main = "Histogram of Populations",freq=FALSE, xlab = "Height of bin") 
 grid(nx = NA, ny = NULL, lty = 2, col = "blue", lwd = 1)
 hist(data$population, prob = TRUE, add = TRUE, col = "blue")
-class(df)
-class(pop)
 ```
 
 # Density line for populations 
@@ -76,7 +74,7 @@ lines(density(log(unlist(df))), lwd = 2, col = 'red')
  
 ```{r}
 # The first thing that I will do is create a factor so then I could create a bar plot
-conf <- factor(data$continent, labels = c("Australia","Africa","Asia","Europe", "North America","Oceania","South America"))
+conf <- factor(data$continent, labels = c("Aust","Afri","Asia","Europe", "N Amer","Oceania","S Amer"))
 table(conf)
 Table_1 <- data %>% select(continent) %>% table()
 Table_1
@@ -91,10 +89,10 @@ vizc <- data %>% select(continent) %>% ggplot(aes(x=conf,fill=conf)) +  geom_bar
 vizc
 ```
 
- Is there any missing data or missing continents?
+ All of the seven continents are included.
  
+ # The following question I will look into is the distribution that is female and smokes cigarettes or tabbaco. I will be using total population.
 ```{r}
-data %>% 
-  select(conf,pop) %>% 
-  group_by()
+femsmokingpopulation <- data %>% select(female_smokers:population) %>% na.omit %>% tbl_df()
+femsmokingpopulation
 ```
