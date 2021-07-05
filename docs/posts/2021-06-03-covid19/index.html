@@ -2162,19 +2162,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <h1 id="female-smoker-population-percent">Female smoker population percent</h1>
 <p>The following table shows that females</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code># A tibble: 68,301 x 3
-   female_smokers population continent
-            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
- 1            7.1    2877800 Europe   
- 2            7.1    2877800 Europe   
- 3            7.1    2877800 Europe   
- 4            7.1    2877800 Europe   
- 5            7.1    2877800 Europe   
- 6            7.1    2877800 Europe   
- 7            7.1    2877800 Europe   
- 8            7.1    2877800 Europe   
- 9            7.1    2877800 Europe   
-10            7.1    2877800 Europe   
+<pre><code># A tibble: 68,301 x 4
+   female_smokers population continent tests_units    
+            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;          
+ 1            7.1    2877800 Europe    tests performed
+ 2            7.1    2877800 Europe    tests performed
+ 3            7.1    2877800 Europe    tests performed
+ 4            7.1    2877800 Europe    tests performed
+ 5            7.1    2877800 Europe    tests performed
+ 6            7.1    2877800 Europe    tests performed
+ 7            7.1    2877800 Europe    tests performed
+ 8            7.1    2877800 Europe    tests performed
+ 9            7.1    2877800 Europe    tests performed
+10            7.1    2877800 Europe    tests performed
 # ... with 68,291 more rows</code></pre>
 <pre><code> female_smokers    population         continent        
  Min.   : 0.10   Min.   :1.083e+04   Length:68301      
@@ -2182,7 +2182,14 @@ document.addEventListener('DOMContentLoaded', function() {
  Median : 6.30   Median :1.014e+07   Mode  :character  
  Mean   :10.56   Mean   :1.114e+08                     
  3rd Qu.:19.30   3rd Qu.:3.785e+07                     
- Max.   :44.00   Max.   :7.795e+09                     </code></pre>
+ Max.   :44.00   Max.   :7.795e+09                     
+ tests_units       
+ Length:68301      
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   </code></pre>
 </div>
 <p>The following code will be for scatterplot</p>
 <div class="layout-chunk" data-layout="l-body">
