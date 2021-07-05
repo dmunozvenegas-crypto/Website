@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["covid19.jpg","covid19_files/anchor-4.2.2/anchor.min.js","covid19_files/bowser-1.9.3/bowser.min.js","covid19_files/distill-2.2.21/template.v2.js","covid19_files/figure-html5/unnamed-chunk-10-1.png","covid19_files/figure-html5/unnamed-chunk-10-2.png","covid19_files/figure-html5/unnamed-chunk-10-3.png","covid19_files/figure-html5/unnamed-chunk-4-1.png","covid19_files/figure-html5/unnamed-chunk-5-1.png","covid19_files/figure-html5/unnamed-chunk-6-1.png","covid19_files/figure-html5/unnamed-chunk-8-1.png","covid19_files/header-attrs-2.8/header-attrs.js","covid19_files/jquery-1.11.3/jquery.min.js","covid19_files/popper-2.6.0/popper.min.js","covid19_files/tippy-6.2.7/tippy-bundle.umd.min.js","covid19_files/tippy-6.2.7/tippy-light-border.css","covid19_files/tippy-6.2.7/tippy.css","covid19_files/tippy-6.2.7/tippy.umd.min.js","covid19_files/webcomponents-2.0.0/webcomponents.js","owid-covid-data.csv"]}
+  {"type":"character","attributes":{},"value":["covid19.jpg","covid19_files/anchor-4.2.2/anchor.min.js","covid19_files/bowser-1.9.3/bowser.min.js","covid19_files/distill-2.2.21/template.v2.js","covid19_files/figure-html5/unnamed-chunk-10-1.png","covid19_files/figure-html5/unnamed-chunk-10-2.png","covid19_files/figure-html5/unnamed-chunk-10-3.png","covid19_files/figure-html5/unnamed-chunk-11-1.png","covid19_files/figure-html5/unnamed-chunk-12-1.png","covid19_files/figure-html5/unnamed-chunk-4-1.png","covid19_files/figure-html5/unnamed-chunk-5-1.png","covid19_files/figure-html5/unnamed-chunk-6-1.png","covid19_files/figure-html5/unnamed-chunk-8-1.png","covid19_files/header-attrs-2.8/header-attrs.js","covid19_files/jquery-1.11.3/jquery.min.js","covid19_files/popper-2.6.0/popper.min.js","covid19_files/tippy-6.2.7/tippy-bundle.umd.min.js","covid19_files/tippy-6.2.7/tippy-light-border.css","covid19_files/tippy-6.2.7/tippy.css","covid19_files/tippy-6.2.7/tippy.umd.min.js","covid19_files/webcomponents-2.0.0/webcomponents.js","owid-covid-data.csv"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1542,31 +1542,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="female-smoker-population-percent">Female smoker population percent</h1>
 <p>The following table shows that females</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code># A tibble: 68,301 x 2
-   female_smokers population
-            &lt;dbl&gt;      &lt;dbl&gt;
- 1            7.1    2877800
- 2            7.1    2877800
- 3            7.1    2877800
- 4            7.1    2877800
- 5            7.1    2877800
- 6            7.1    2877800
- 7            7.1    2877800
- 8            7.1    2877800
- 9            7.1    2877800
-10            7.1    2877800
+<pre><code># A tibble: 68,301 x 3
+   female_smokers population continent
+            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
+ 1            7.1    2877800 Europe   
+ 2            7.1    2877800 Europe   
+ 3            7.1    2877800 Europe   
+ 4            7.1    2877800 Europe   
+ 5            7.1    2877800 Europe   
+ 6            7.1    2877800 Europe   
+ 7            7.1    2877800 Europe   
+ 8            7.1    2877800 Europe   
+ 9            7.1    2877800 Europe   
+10            7.1    2877800 Europe   
 # ... with 68,291 more rows</code></pre>
-<pre><code> female_smokers    population       
- Min.   : 0.10   Min.   :1.083e+04  
- 1st Qu.: 1.90   1st Qu.:3.546e+06  
- Median : 6.30   Median :1.014e+07  
- Mean   :10.56   Mean   :1.114e+08  
- 3rd Qu.:19.30   3rd Qu.:3.785e+07  
- Max.   :44.00   Max.   :7.795e+09  </code></pre>
+<pre><code> female_smokers    population         continent        
+ Min.   : 0.10   Min.   :1.083e+04   Length:68301      
+ 1st Qu.: 1.90   1st Qu.:3.546e+06   Class :character  
+ Median : 6.30   Median :1.014e+07   Mode  :character  
+ Mean   :10.56   Mean   :1.114e+08                     
+ 3rd Qu.:19.30   3rd Qu.:3.785e+07                     
+ Max.   :44.00   Max.   :7.795e+09                     </code></pre>
 </div>
-The following code will be for scatterplot
+<p>The following code will be for scatterplot</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="covid19_files/figure-html5/unnamed-chunk-10-1.png" width="624" /><img src="covid19_files/figure-html5/unnamed-chunk-10-2.png" width="624" /><img src="covid19_files/figure-html5/unnamed-chunk-10-3.png" width="624" /></p>
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="covid19_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="covid19_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
 <h1 id="female-smokers-information">Female Smokers information</h1>
 <div class="layout-chunk" data-layout="l-body">

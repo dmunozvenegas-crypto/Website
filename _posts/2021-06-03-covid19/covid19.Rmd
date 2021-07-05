@@ -40,7 +40,6 @@ pop <- data %>%
   na.omit(population)
 summary(pop)
 IQR(unlist(pop))
-
 ```
 
 # Histogram of Populations
@@ -101,23 +100,39 @@ vizc
   
 ```{r}
 femsmokingpop<- data %>% 
-  select(female_smokers,population) %>% 
+  select(female_smokers,population,continent,tests_units) %>% 
   na.omit() %>%
   tbl_df()
 femsmokingpop
 summary(femsmokingpop)
 ```
+  
   The following code will be for scatterplot 
+  
 ```{r}
-(g<- ggplot(femsmokingpop, aes(x=female_smokers, y=population,na.omit())) + geom_point() + geom_smooth(method ="lm"))
-g + coord_cartesian(xlim=c(0,.1), ylim=c(0, 100000))
+g<- ggplot(femsmokingpop, aes(x=female_smokers, y=population,na.omit())) + geom_point() + geom_smooth(method ="lm")
+```
 
+
+```{r}
 ggplot(femsmokingpop, aes(x=female_smokers,y=population,na.omit())) + 
-  geom_point(col="steelblue", size=3) + geom_smooth(method="lm",color="firebrick") + 
+  geom_point(aes(col= continent, size=3, shape = tests_units)) + geom_smooth(method="lm",color="firebrick") + 
   coord_cartesian(xlim=c(0,15
                          ), ylim=c(0, 1000000000)) + labs(title="female smoker Population", subtitle="From Covid 19 dataset", y="Population", x="female smokers", caption="Covid 19 female smoker population")
 
 ```
+
+
+```{r}
+ggplot(femsmokingpop, aes(x=female_smokers,y=population,na.omit())) + 
+  geom_point(aes(col= continent, size=3, shape = )) + geom_smooth(method="lm",color="firebrick") + 
+  coord_cartesian(xlim=c(0,15
+                         ), ylim=c(0, 1000000000)) + labs(title="female smoker Population", subtitle="From Covid 19 dataset", y="Population", x="female smokers", caption="Covid 19 female smoker population") + scale_colour_brewer(palette = "Set1") + scale_x_continuous(breaks=seq(0, 0.1, 0.01), labels = sprintf("%1.2f%%", seq(0, 0.1, 0.01))) + 
+  scale_y_continuous(breaks=seq(0, 1000000, 200000), labels = function(x){paste0(x/1000, 'K')})
+```
+
+
+
 
 # Female Smokers information
 ```{r}
